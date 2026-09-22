@@ -317,7 +317,12 @@ body::before{
 .side-copyright .copyright-title,.gate-copyright .copyright-title{display:inline-block;font-weight:700;letter-spacing:.08em;font-size:9px;color:#aeb9c8;margin-bottom:3px;}
 .side-copyright strong,.gate-copyright strong{color:#d7dee8;font-weight:600;}
 .side-copyright .copyright-reserved,.gate-copyright .copyright-reserved{opacity:.82;}
-.gate-copyright{margin:14px auto 0;text-align:center;font-size:10.5px;line-height:1.55;color:#9aa6b6;letter-spacing:.01em;max-width:430px;}
+.side-copyright .copyright-title,.gate-copyright .copyright-title{display:inline-block;font-weight:700;letter-spacing:.08em;font-size:9px;color:#aeb9c8;margin-bottom:3px;}
+.side-copyright strong,.gate-copyright strong{color:#d7dee8;font-weight:600;}
+.side-copyright .copyright-reserved,.gate-copyright .copyright-reserved{opacity:.82;}
+.gate-copyright{margin:10px auto 0;text-align:center;font-size:9.5px;line-height:1.5;color:#b0b7c1;letter-spacing:.01em;max-width:430px;}
+.gate-credit{margin:3px auto 0;text-align:center;font-size:8.5px;line-height:1.35;color:#9aa4b3;letter-spacing:.015em;}
+.gate-credit strong{font-weight:600;color:#7f8998;}
 
 .main{
   flex:1;
@@ -544,6 +549,13 @@ body::before{
 .confetti-piece{position:absolute; top:-16px; border-radius:2px; animation:confettiFall linear forwards;}
 
 
+
+/* ---------- autoría institucional destacada en el inicio ---------- */
+@media(max-width:520px){
+  .creator-credit{padding:12px;margin-bottom:19px;}
+  .creator-name{font-size:13px;}
+}
+
 /* ---------- visual refresh ---------- */
 body{background:radial-gradient(circle at 15% 0%, rgba(36,183,201,.10), transparent 28%), linear-gradient(180deg,#F8FAFD 0%,var(--fog) 100%);}
 .gate-card,.card{box-shadow:0 18px 50px -28px rgba(18,32,51,.34);}
@@ -710,6 +722,7 @@ body{background:radial-gradient(circle at 15% 0%, rgba(36,183,201,.10), transpar
       <div class="gate-stat"><strong>8</strong><span>preguntas</span></div>
       <div class="gate-stat"><strong>6/8</strong><span>para aprobar</span></div>
     </div>
+
     <div id="resumeNotice" class="resume-notice" hidden></div>
 
     <div class="field" id="f-nombre">
@@ -730,7 +743,8 @@ body{background:radial-gradient(circle at 15% 0%, rgba(36,183,201,.10), transpar
 
     <button type="submit" class="btn btn-primary" id="btnStart">Comenzar curso →</button>
     <p class="gate-foot" id="gateStatus">Tus datos se guardan de forma segura para control de asistencia.</p>
-    <p class="gate-copyright"><span class="copyright-title">REINDUCCIÓN BASC V6</span><br>Material institucional desarrollado por el <strong>Equipo de Mejoramiento Continuo</strong></p>
+    <p class="gate-copyright">Material institucional · Reinducción BASC V6.0.1</p>
+    <p class="gate-credit">Desarrollado por · <strong>Equipo de Mejoramiento Continuo</strong></p>
   </form>
 </section>
 
@@ -786,7 +800,7 @@ body{background:radial-gradient(circle at 15% 0%, rgba(36,183,201,.10), transpar
 const CONFIG = {
   // Pega aquí la URL de tu Web App de Google Apps Script (ver archivo Code.gs).
   // Ejemplo: "https://script.google.com/macros/s/AKfycb.../exec"
-  SHEET_ENDPOINT: "PEGA_AQUI_TU_URL_DE_APPS_SCRIPT",
+  SHEET_ENDPOINT: "https://script.google.com/macros/s/AKfycbyxlCsGjH5ejcofYQDNyM2u_V7JZlK10TlCVkZV5zYsUPToqVYGWqL-Cvec5xfv-l8W/exec",
   COURSE_NAME: "Reentrenamiento Cargos Críticos — Sistema BASC V6",
   PASS_SCORE: 6
 };
